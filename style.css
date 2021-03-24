@@ -1,0 +1,36 @@
+body{
+    background-color: #333333;
+    color: whitesmoke;
+      font-family: Montserrat, sans-serif;
+
+}
+table,tr,td{
+    
+    font-size: 2rem;
+
+}
+table{
+    margin: auto;
+}
+#everything{
+    border-radius: 1rem;
+    background-color:rgba(33,33,33,50);
+    margin:auto;
+}
+@media only screen and (max-width: 600px) {
+    td
+{
+    padding:2rem;   
+}
+#everything{
+    width:90%;
+
+}
+}@media only screen and (min-width: 600px) {
+    td{
+        padding:2rem;
+    }#everything{
+        width:50vw;
+        
+    }
+}
