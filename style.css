@@ -1,13 +1,16 @@
 body{
     background-color: #333333;
     color: whitesmoke;
-      font-family: Montserrat, sans-serif;
+      font-family: Montserrat, sans-serif;font-size: 2rem;
 
 }
-table,tr,td{
-    
-    font-size: 2rem;
-
+a{
+    text-decoration: none;
+    color:#198;
+}
+p{
+margin:auto;
+padding: 1rem;
 }
 table{
     margin: auto;

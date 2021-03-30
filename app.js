@@ -34,20 +34,17 @@ function grabData2() {
     };
 }
 function main() {
-    if (backGate < 0) {
-        oneNineSix.innerText = 'You probably missed the bus';
-    } else {
-        oneNineSix.innerText = parseTime(backGate % 1000);
-    }
-    if (oppRoad < 0) {
-        oneNineEight.innerText = 'You probably missed the bus';
-    } else {
-        oneNineEight.innerText = parseTime(oppRoad % 1000);
-    }
+    oneNineSix.innerText = parseTime(backGate % 1000);
+
+    oneNineEight.innerText = parseTime(oppRoad % 1000);
 }
 
 function parseTime(time) {
-    const minutes = Math.floor(time / 60);
-    time -= minutes * 60;
-    return `${minutes}m${parseInt(time)}s`;
+    if (time < 0) return 'Leaving';
+    const hours = Math.floor(time / 3600);
+    time -= hours * 3600;
+    const minutes = Math.round(time / 60);
+
+    if (hours == 0) return `${minutes}m`;
+    return `${hours}h${parseInt(minutes)}m`;
 }
